@@ -11,8 +11,8 @@
 #include <ESP32Servo.h>
 
 // WiFi credentials
-const char* ssid = "AASUS";
-const char* password = "IvarNilsson/731";
+const char* ssid = "";
+const char* password = "";
 
 int BTNon = 35;
 int BTNoff = 34;
@@ -101,7 +101,7 @@ String readB2() {
   String payload;
   if (WiFi.status() == WL_CONNECTED) {
     HTTPClient http;
-    String url = "https://script.google.com/macros/s/AKfycbydSyxiUWwbKO6Roe26yosra6bV1KymxGhokLHnPt8XbowN29pdmJFksuYjcgeWjva3/exec?read=B2";
+    String url = "";
     Serial.println("Making a request");
     http.begin(url.c_str()); //Specify the URL and certificate
     http.setFollowRedirects(HTTPC_STRICT_FOLLOW_REDIRECTS);
