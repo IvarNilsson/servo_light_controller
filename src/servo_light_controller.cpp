@@ -5,6 +5,7 @@
   card: ESP32 (ESP32 Dev Module)
 */
 
+// TODO: add a error led
 
 #include <HTTPClient.h>
 #include <WiFi.h>
@@ -116,7 +117,7 @@ String readB2() {
     }
     http.end();
   } else {
-    Serial.println("FUUUUUUK");
+    Serial.println("Not good (yet to happen) :(");
   }
   return payload;
 }
